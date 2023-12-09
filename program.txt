@@ -1,0 +1,31 @@
+; reg_d = ((8 + 6) - 2) * 100 / 13
+
+push 8
+push 6
+add
+push 2
+sub
+push 100
+imul
+push 13
+idiv
+pop
+
+; 123 + 321 on stack
+
+push 123
+push 321
+
+; reg_c = 5!
+
+add
+push 1
+pop
+push 1
+pop
+push 5
+pop
+imul reg_a reg_c reg_c
+sub reg_a reg_b reg_a
+cmp reg_a reg_f
+jne 28
